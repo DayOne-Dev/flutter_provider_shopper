@@ -15,8 +15,12 @@ dependencies:
   go_router: ^14.0.0
   provider: ^6.0.2
   window_size:
-    git:
-      url: https://github.com/google/flutter-desktop-embedding.git
+    # JFrog doc to setup VCS repo https://jfrog.com/help/r/jfrog-artifactory-documentation/vcs-repositories
+    git:  # curl -u<UserName>:<ACCESS_TOKEN> -XGET https://psazuse.jfrog.io/artifactory/api/vcs/branches/krishnam-github-remote/<USER_ORG>/<REPO>
+      # All Branches:: https://psazuse.jfrog.io/artifactory/api/vcs/branches/krishnam-github-remote/<USER_ORG>/<REPO>
+      # Branch URL:: https://psazuse.jfrog.io/artifactory/api/vcs/downloadBranch/krishnam-github-remote/<USER_ORG>/<REPO>/<BRANCH_NAME>
+      # url: https://github.com/google/flutter-desktop-embedding.git
+      url:  https://psazuse.jfrog.io/artifactory/api/vcs/downloadBranch/krishnam-github-remote/google/flutter-desktop-embedding/main
       path: plugins/window_size
 
 dev_dependencies:
